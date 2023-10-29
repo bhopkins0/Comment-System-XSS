@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<p>" . htmlspecialchars($row['comment_text'], ENT_QUOTES) . "</p>";
+            echo "<p>" . $row['comment_text'] . "</p>";
         }
     } else {
         echo "No comments yet.";
